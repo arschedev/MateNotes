@@ -38,7 +38,7 @@ function Note() {
 
   return (
     <div className="Note Main">
-      <a className="back" onClick={() => navigate("/")}>
+      <a className="back" onClick={() => navigate("/MateNotes")}>
         &larr;
       </a>
       <br />

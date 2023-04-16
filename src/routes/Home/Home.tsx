@@ -28,7 +28,7 @@ function Home() {
   }
 
   const openNote: MouseEventHandler = event => {
-    navigate("/note", { state: { id: event.currentTarget.id } })
+    navigate("/MateNotes/note", { state: { id: event.currentTarget.id } })
   }
 
   const deleteNote: MouseEventHandler = event => {

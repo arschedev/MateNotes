@@ -6,8 +6,8 @@ import Note from "./routes/Note"
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/note" element={<Note />} />
+      <Route path="/MateNotes/" element={<Home />} />
+      <Route path="/MateNotes/note/" element={<Note />} />
     </Routes>
   )
 }
