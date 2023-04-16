@@ -7,6 +7,7 @@
     "dev": "vite",
     "host": "vite --host",
     "build": "tsc && vite build --outDir ../",
+    "deploy": "gh-pages -d ../",
     "preview": "vite preview --outDir ../",
     "host-preview": "vite preview --outDir ../ --host",
     "pretty": "npx prettier --write ."
@@ -21,6 +22,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
+    "gh-pages": "^5.0.0",
     "prettier": "^2.8.7",
     "typescript": "^4.9.3",
     "vite": "^4.2.0"
