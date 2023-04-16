@@ -4,9 +4,9 @@
   flex-direction: column;
   gap: 5px;
   padding: 20px;
-  padding-right: 0;
+  padding-right: 10px;
   margin-bottom: 16px;
-  border-radius: 20px;
+  border-radius: 24px;
   background-color: var(--primary);
   user-select: none;
   -webkit-user-select: none;
@@ -20,8 +20,8 @@
 }
 
 .NoteItem:active {
-  width: 98%;
-  margin-left: 1%;
+  width: 96%;
+  margin-left: 2%;
   transition: all 0.25s;
 }
 

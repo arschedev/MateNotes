@@ -2,14 +2,13 @@
   cursor: pointer;
   width: 72px;
   height: 72px;
-  font-size: 54px;
+  font-size: 58px;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: flex-end;
   position: fixed;
   bottom: 72px;
-  right: 14vw;
+  right: calc(14vw - 10px);
   border-radius: 50%;
   background-color: var(--accent);
   color: var(--white);
@@ -21,9 +20,9 @@
 .AddNote:active {
   width: 63px;
   height: 63px;
-  font-size: 45px;
+  font-size: 49px;
   bottom: 77px;
-  right: calc(14vw + 5px);
+  right: calc(14vw - 5px);
   transition: all 0.1s;
 }
 
