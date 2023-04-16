@@ -1,0 +1,7 @@
+.InputBar {
+  padding: 10px;
+  background-color: var(--bar);
+  color: var(--white);
+  border-radius: 20px;
+  border: 0;
+}

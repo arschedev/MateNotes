@@ -1,0 +1,35 @@
+.NoteItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  padding-right: 0;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  background-color: var(--primary);
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all 0.25s;
+}
+
+.NoteItem:hover {
+  cursor: pointer;
+  background-color: var(--hover);
+  transition: all 0.25s;
+}
+
+.NoteItem:active {
+  width: 98%;
+  margin-left: 1%;
+  transition: all 0.25s;
+}
+
+.title {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.description {
+  color: var(--gray);
+}

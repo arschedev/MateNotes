@@ -1,0 +1,6 @@
+.no-notes-here-yet {
+  text-align: center;
+  color: var(--dimmed);
+  user-select: none;
+  -webkit-user-select: none;
+}
