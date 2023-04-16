@@ -10,7 +10,19 @@ import "./Home.css"
 function Home() {
   const navigate = useNavigate()
 
-  const [notes, setNotes] = useState<INote[]>(JSON.parse(localStorage.getItem("notes") ?? "[]"))
+  const defaultNotes: INote[] = [
+    {
+      id: "0",
+      title: "Welcome to MateNotes",
+      description: "MateNotes is a minimal note taking app made with React.js",
+      content:
+        "MateNotes is a minimal note taking app made with React.js\nWe have included only necessary things here to keep it as simple as possible.\n\nℹ️ Tips:\nTo delete a note, right click on it"
+    }
+  ]
+
+  const [notes, setNotes] = useState<INote[]>(
+    JSON.parse(localStorage.getItem("notes") ?? JSON.stringify(defaultNotes))
+  )
   const [searchQuery, setSearchQuery] = useState<string>("")
 
   useEffect(() => {
@@ -28,7 +40,7 @@ function Home() {
   }
 
   const openNote: MouseEventHandler = event => {
-    navigate("/MateNotes/note", { state: { id: event.currentTarget.id } })
+    navigate("/MateNotes/note/", { state: { id: event.currentTarget.id } })
   }
 
   const deleteNote: MouseEventHandler = event => {
@@ -50,15 +62,15 @@ function Home() {
       {notes
         .filter(
           note =>
-            note.content.toLowerCase().includes(searchQuery) ||
-            note.title.toLowerCase().includes(searchQuery)
+            note.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            note.title.toLowerCase().includes(searchQuery.toLowerCase())
         )
         .map(note => (
           <NoteItem
             key={note.id}
             id={note.id}
             title={note.title.trim() ? note.title : "Untitled"}
-            description={note.description.trim() ? `${note.description} ...` : "No text"}
+            description={note.description.trim() ? note.description : "No text"}
             click={openNote}
             rightClick={deleteNote}
           />

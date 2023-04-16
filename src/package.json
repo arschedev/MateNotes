@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "host": "vite --host",
-    "build": "tsc && vite build --outDir ../",
+    "build": "tsc && vite build --outDir ..",
     "deploy": "gh-pages -d ..",
-    "preview": "vite preview --outDir ../",
-    "host-preview": "vite preview --outDir ../ --host",
+    "preview": "vite preview --outDir ..",
+    "host-preview": "vite preview --outDir .. --host",
     "pretty": "npx prettier --write ."
   },
   "dependencies": {

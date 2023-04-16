@@ -1,5 +1,5 @@
 .Note {
-  color: white;
+  color: var(--white);
 }
 
 .back {
@@ -9,6 +9,12 @@
   font-weight: 100;
   user-select: none;
   -webkit-user-select: none;
+  transition: color 0.25s;
+}
+
+.back:active {
+  color: var(--accent);
+  transition: color 0.25s;
 }
 
 .title-in {
@@ -27,4 +33,5 @@
   color: var(--white);
   border-radius: 20px;
   border: 0;
+  resize: none;
 }

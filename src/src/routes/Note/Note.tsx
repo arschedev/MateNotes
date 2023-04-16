@@ -23,7 +23,8 @@ function Note() {
   useEffect(() => {
     notes[noteIndex].title = title
     notes[noteIndex].content = content
-    notes[noteIndex].description = content.split("\n")[0]
+    notes[noteIndex].description =
+      content && !content.split("\n")[0].trim() ? "..." : content.split("\n")[0]
 
     localStorage.setItem("notes", JSON.stringify(notes))
   }, [title, content])
@@ -38,7 +39,7 @@ function Note() {
 
   return (
     <div className="Note Main">
-      <a className="back" onClick={() => navigate("/MateNotes")}>
+      <a className="back" onClick={() => navigate("/MateNotes/")}>
         &larr;
       </a>
       <br />
