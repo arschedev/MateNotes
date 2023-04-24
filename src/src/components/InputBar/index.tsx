@@ -1,2 +1,1 @@
-import InputBarProps from "./InputBar"
-export default InputBarProps
+export { InputBar } from "./InputBar"

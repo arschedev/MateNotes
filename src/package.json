@@ -7,10 +7,10 @@
     "dev": "vite",
     "host": "vite --host",
     "build": "tsc && vite build --outDir ..",
-    "deploy": "gh-pages -d ..",
     "preview": "vite preview --outDir ..",
     "preview-host": "vite preview --outDir .. --host",
-    "pretty": "npx prettier --write ."
+    "pretty": "npx prettier --write .",
+    "_deploy": "gh-pages -d .."
   },
   "dependencies": {
     "react": "^18.2.0",

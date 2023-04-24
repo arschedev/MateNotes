@@ -1,13 +1,13 @@
-import React, { ChangeEventHandler, MouseEventHandler, useEffect, useState } from "react"
+import { ChangeEventHandler, MouseEventHandler, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import SearchBar from "@/components/SearchBar"
-import NoteItem from "@/components/NoteItem"
-import AddNote from "@/components/AddNote"
+import { SearchBar } from "@/components/SearchBar"
+import { NoteItem } from "@/components/NoteItem"
+import { AddNote } from "@/components/AddNote"
 import { INote } from "@/routes/Note"
 
 import "./Home.css"
 
-function Home() {
+export function Home() {
   const navigate = useNavigate()
 
   const defaultNotes: INote[] = [
@@ -79,5 +79,3 @@ function Home() {
     </div>
   )
 }
-
-export default Home

@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from "react"
+import { FC, MouseEventHandler } from "react"
 import "./NoteItem.css"
 
 interface NoteItemProps {
@@ -9,7 +9,7 @@ interface NoteItemProps {
   rightClick: MouseEventHandler
 }
 
-const NoteItem = ({ id, title, description, click, rightClick }: NoteItemProps) => {
+export const NoteItem: FC<NoteItemProps> = ({ id, title, description, click, rightClick }) => {
   return (
     <div className="NoteItem" id={id} onClick={click} onContextMenu={rightClick}>
       <a className="title">{title}</a>
@@ -17,5 +17,3 @@ const NoteItem = ({ id, title, description, click, rightClick }: NoteItemProps) 
     </div>
   )
 }
-
-export default NoteItem

@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler } from "react"
+import { FC, ChangeEventHandler } from "react"
 import "./InputBar.css"
 
 interface InputBarProps {
@@ -7,7 +7,7 @@ interface InputBarProps {
   value: string
 }
 
-const InputBar = ({ placeholder, onType, value }: InputBarProps) => {
+export const InputBar: FC<InputBarProps> = ({ placeholder, onType, value }) => {
   return (
     <input
       className="InputBar"
@@ -18,5 +18,3 @@ const InputBar = ({ placeholder, onType, value }: InputBarProps) => {
     />
   )
 }
-
-export default InputBar

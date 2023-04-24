@@ -1,10 +1,12 @@
-import React, { ChangeEventHandler } from "react"
+import { FC, ChangeEventHandler } from "react"
 import "./SearchBar.css"
 
-const SearchBar = ({ onType }: { onType: ChangeEventHandler<HTMLInputElement> }) => {
+interface SearchBarProps {
+  onType: ChangeEventHandler<HTMLInputElement>
+}
+
+export const SearchBar: FC<SearchBarProps> = ({ onType }) => {
   return (
     <input className="SearchBar" type="text" placeholder=" 🔍  Search notes" onChange={onType} />
   )
 }
-
-export default SearchBar

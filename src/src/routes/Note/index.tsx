@@ -1,3 +1,2 @@
-import Note, { INote } from "./Note"
-export default Note
-export type { INote }
+export { Note } from "./Note"
+export type { INote } from "./Note"

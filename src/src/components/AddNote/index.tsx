@@ -1,2 +1,1 @@
-import AddNote from "./AddNote"
-export default AddNote
+export { AddNote } from "./AddNote"

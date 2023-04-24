@@ -1,6 +1,6 @@
-import React, { useState, ChangeEventHandler, useEffect } from "react"
+import { useState, ChangeEventHandler, useEffect } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
-import InputBar from "@/components/InputBar"
+import { InputBar } from "@/components/InputBar"
 import "./Note.css"
 
 export interface INote {
@@ -10,7 +10,7 @@ export interface INote {
   content: string
 }
 
-function Note() {
+export function Note() {
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -58,5 +58,3 @@ function Note() {
     </div>
   )
 }
-
-export default Note

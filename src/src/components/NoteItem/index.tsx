@@ -1,2 +1,1 @@
-import NoteItem from "./NoteItem"
-export default NoteItem
+export { NoteItem } from "./NoteItem"
